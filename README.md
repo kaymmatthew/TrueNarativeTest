@@ -19,4 +19,4 @@ To run the tests with Maven, open a command window and run:
 Viewing the reports
 The command above when executed will produce a Serenity test report in the target/site/serenity directory.
 
-Joseph
+Kay
