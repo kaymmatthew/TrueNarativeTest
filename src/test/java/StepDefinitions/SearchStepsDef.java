@@ -29,14 +29,14 @@ public class SearchStepsDef extends UIInteractionSteps {
         homePage.clickCareerLink();
     }
 
-    @When("User click Search all jobs button")
-    public void user_click_search_all_jobs_button() {
-        careersPage.clickSearchAllButton();
+    @When("User click Search jobs button")
+    public void user_click_search_jobs_button() {
+        careersPage.clickSearchJobsButton();
     }
 
     @When("User search for keyword {string}")
     public void user_search_for_keyword(String value) {
-      careersPage.searchKeyword(value);
+        careersPage.searchKeyword(value);
     }
 
     @Then("User checks the search results is returned")

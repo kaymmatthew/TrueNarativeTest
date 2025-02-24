@@ -10,18 +10,18 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElemen
 public class CareersPage extends PageObject {
 
     HomePage homePage = new HomePage();
-    public static final By SearchAllJobs_Button = By.xpath("//div[@class='score-center']/a[.='Search all jobs']");
-    public static final By SEARCHInput_FIELD = By.cssSelector("[placeholder=Search]");
+    public static final By searchJobs_Button = By.xpath("//a[@class='score-button btn-red'][.='Search jobs']");
+    public static final By SEARCHInput_FIELD = By.xpath("//input[@placeholder='Search for jobs or keywords']");
     public static final By SEARCH_Result = By.cssSelector("[class=search-results-item]");
 
-    public void clickSearchAllButton(){
+    public void clickSearchJobsButton(){
         if (getDriver() == null){
-           throw new NullArgumentException();
+            throw new NullArgumentException();
         }
         homePage.SwitchToSecondPage(1);
         withTimeoutOf(Duration.ofSeconds(1))
-                .waitFor(presenceOfElementLocated(SearchAllJobs_Button));
-        find(SearchAllJobs_Button).click();
+                .waitFor(presenceOfElementLocated(searchJobs_Button));
+        find(searchJobs_Button).click();
     }
 
     public void searchKeyword(String value){
